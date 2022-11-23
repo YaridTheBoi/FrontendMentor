@@ -4,6 +4,29 @@ body{
   background-color: hsl(30, 38%, 92%);
 }
 
+button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:15px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  width: 100%;
+  font-size: 17px;
+  font-weight: 700;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button:hover{
+  background-color: hsl(158, 36%, 30%);
+}
+
+
 .center{
   display: flex;
   justify-content: center;
@@ -19,15 +42,14 @@ body{
 }
 
 .card-body{
-  width: 50vw;
+  width: 50%;
+  height: auto;
   min-width: 350px;
   min-height: 500px;
   background-color: hsl(0, 0%, 100%);
   border-radius: 15px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  
   overflow: hidden;
 }
 
@@ -59,9 +81,11 @@ body{
 }
 
 .text-area{
+  height: 100%;
   margin-left: 20px;
   margin-right: 20px;
-  color: hsl(228, 12%, 48%)
+  color: hsl(228, 12%, 48%);
+  align-self: center;
 }
 
 img{
