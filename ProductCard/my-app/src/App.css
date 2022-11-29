@@ -34,7 +34,19 @@ button:hover{
   min-height: 100vh;
 }
 
+.photo-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  min-width: 50%;
+}
 
+.photo-area img{
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
+}
 .description{
   text-align: left;
   font-size: 14px;

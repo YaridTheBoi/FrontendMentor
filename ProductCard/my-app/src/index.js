@@ -1,17 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const photo= document.getElementById('photo');
+const card= document.getElementById('card');
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+function handleResize(){
+  if(window.innerWidth<1200){
+    console.log("Mobile")
+    photo.setAttribute("src", "./images/image-product-mobile.jpg")
+    card.style.flexWrap= 'wrap';
+  }else{
+    console.log("Desktop")
+    photo.setAttribute("src", "./images/image-product-desktop.jpg")
+    card.style.flexWrap= 'nowrap';
+  }
+}
+
+window.addEventListener("resize", handleResize)
